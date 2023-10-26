@@ -12,6 +12,8 @@ const AddProduct = () => {
 
     const formData = { name,image,price,shortDescription,ratting,type }
     console.log(formData);
+
+    
   }
 
   return (
