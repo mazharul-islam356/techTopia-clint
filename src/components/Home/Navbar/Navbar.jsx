@@ -34,7 +34,7 @@ const Navbar = () => {
             </label>
        
           </div>
-          <a className="btn btn-ghost normal-case text-xl">Logo</a>
+          <img src="/logo.png" alt="" className="w-36 mx-2" />
         </div>
         <div className="navbar-center hidden lg:flex">
           {navLink}

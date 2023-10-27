@@ -19,8 +19,7 @@ const Services = () => {
           <div className="p-4">
             <h2 className="text-3xl">Google</h2>
             <p>
-              This package can vary greatly depending on the Bride & Groom’s
-              needs.
+            Google is a technology company that specializes in Internet-related services and products.
             </p>
           </div>
         </div>
@@ -31,8 +30,7 @@ const Services = () => {
           <div className="p-4">
             <h2 className="text-3xl">Samsung</h2>
             <p>
-              This package can vary greatly depending on the Bride & Groom’s
-              needs.
+            Samsung offers a wide range of products and services, including smartphones, TVs, appliances, online services, and telecommunications products
             </p>
           </div>
         </div>
@@ -43,8 +41,7 @@ const Services = () => {
           <div className="p-4">
             <h2 className="text-3xl">Apple</h2>
             <p>
-              This package can vary greatly depending on the Bride & Groom’s
-              needs.
+            Apple is an American technology company that specializes in consumer electronics, computer software, and online services.
             </p>
           </div>
         </div>
@@ -54,8 +51,7 @@ const Services = () => {
           <div className="p-4">
             <h2 className="text-3xl">OnePlus</h2>
             <p>
-              This package can vary greatly depending on the Bride & Groom’s
-              needs.
+            OnePlus Care: A customer support service that provides users with help with their OnePlus devices.
             </p>
           </div>
         </div>
@@ -65,8 +61,7 @@ const Services = () => {
           <div className="p-4">
             <h2 className="text-3xl">Xiaomi</h2>
             <p>
-              This package can vary greatly depending on the Bride & Groom’s
-              needs.
+            Xiaomi is a Chinese electronics company that specializes in smartphones, wearable devices, and other consumer electronics.
             </p>
           </div>
         </div>
@@ -76,8 +71,7 @@ const Services = () => {
           <div className="p-4">
             <h2 className="text-3xl">Nokia</h2>
             <p>
-              This package can vary greatly depending on the Bride & Groom’s
-              needs.
+            Nokia is a Finnish telecommunications company that specializes in mobile phone networks, network infrastructure, and software. 
             </p>
           </div>
         </div>
