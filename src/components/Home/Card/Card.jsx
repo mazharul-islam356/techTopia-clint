@@ -1,9 +1,18 @@
+
 import { useLoaderData } from "react-router-dom";
+import { useFetchProducts } from "../../../Custom Hook/useFetchProducts";
+
 
 
 const Card = () => {
+
+  
     const data = useLoaderData()
     console.log(data);
+
+    const {products} = useFetchProducts()
+    console.log(products);
+
  
 
   return (
