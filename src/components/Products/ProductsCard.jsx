@@ -1,38 +1,34 @@
 /* eslint-disable react/prop-types */
 
-import {  Link } from 
-"react-router-dom";
-
-const Card = () => {
-
-  
-  
+import { Link } from "react-router-dom";
 
 
-  return (
-    <div>
+const ProductsCard = ({product}) => {
+
+    
+    const {id,brand_name,img} = product || {}
+    console.log(id,brand_name,img);
 
 
-     <div >
-
-     <Link >
+   
+    return (
+        <div>
+            <Link to={`/products/${brand_name}`} >
                 <div  className="card h-72 justify-center items-center mt-4 w-96 bg-base-100 shadow-xl">
                 <figure>
                   <img
-                    src=""
+                    src={img}
                     alt=""
                   />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title">{}</h2>
+                  <h2 className="card-title">{brand_name}</h2>
                   
                 </div>
               </div>
                 </Link>
         </div>
-      
-    </div>
-  );
+    );
 };
 
-export default Card;
+export default ProductsCard;

@@ -1,15 +1,19 @@
-import { useLoaderData } from "react-router-dom";
-import ProductCard from "./ProductCard";
+/* eslint-disable react/prop-types */
 
-const Products = () => {
+import ProductsCard from "./ProductsCard";
 
-    const products = useLoaderData()
-    console.log(products);
-    
+
+
+const Products = ({data}) => {
+    console.log(data); 
     return (
-        <div className="grid grid-cols-4 gap-6" >
+        <div className="ml-10 grid grid-cols-3 gap-3">
 
-            {products.map(product=> <ProductCard key={product._id} products={product}></ProductCard> )}
+
+        {
+            data.map(product=><ProductsCard key={product.id} product={product}></ProductsCard>)
+        }
+            
             
         </div>
     );
