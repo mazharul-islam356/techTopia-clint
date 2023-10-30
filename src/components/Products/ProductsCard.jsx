@@ -4,12 +4,11 @@ import { Link } from "react-router-dom";
 
 
 const ProductsCard = ({product}) => {
+  
+  const {brand_name,img} = product || {}
+  
 
-    
-    const {id,brand_name,img} = product || {}
-    console.log(id,brand_name,img);
-
-
+   
    
     return (
         <div>

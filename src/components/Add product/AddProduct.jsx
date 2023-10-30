@@ -1,10 +1,17 @@
+import { useState } from "react";
 
 const AddProduct = () => {
+
+
+ 
 
   
   const handleForm =  (e) => {
     e.preventDefault();
+    
+    
     const form = e.target;
+    
 
     const brandType = form.brandType.value;
     const name = form.name.value;
@@ -52,7 +59,7 @@ const AddProduct = () => {
               <option>Samsung</option>
               <option>Apple</option>
               <option>Google</option>
-              <option>Xaomi</option>
+              <option>Xiaomi</option>
               <option>Nokia</option>
               <option>OnePlus</option>
             </select>
