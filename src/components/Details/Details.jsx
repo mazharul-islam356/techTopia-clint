@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import DetailsCard from "./DetailsCard";
 
 const Details = () => {
 
@@ -18,16 +19,12 @@ useEffect(()=>{
 },[id,detailsData])
 
 
-console.log(productt);
-
-
-
-
 
 
     return (
         <div>
-            this is details
+
+        <DetailsCard productt={productt} ></DetailsCard>
 
             
         </div>
