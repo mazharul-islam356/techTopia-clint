@@ -18,12 +18,15 @@ useEffect(()=>{
   setProducts(productsShow)
   
 },[formData,data])
-
 console.log(products);
+
 
 
   return (
     <div>
+
+
+
      
       <div className="grid grid-cols-4 gap-4">
         {products.map((singleData) => (

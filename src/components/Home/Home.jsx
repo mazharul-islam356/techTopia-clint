@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Services from "./Our-Services/Services";
 import Products from "../Products/Products";
+import MeetOurTeam from "./MeetOurTeam";
 
 
 
@@ -36,6 +37,8 @@ const Home = () => {
     <Products data={data}></Products>
 
     <Services></Services>
+
+    <MeetOurTeam></MeetOurTeam>
 
     </div>
   );
