@@ -24,11 +24,7 @@ console.log(products);
 
   return (
     <div>
-      
-      
-
-
-      
+     
       <div className="grid grid-cols-4 gap-4">
         {products.map((singleData) => (
           <div key={singleData._id} className="card mb-8 mt-4 w-[330px] bg-base-100 shadow-xl">

@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import DetailsCard from "./DetailsCard";
+import MyCart from "../MyCart/MyCart";
 
 const Details = () => {
 
@@ -23,6 +24,7 @@ useEffect(()=>{
 
     return (
         <div>
+           
 
         <DetailsCard productt={productt} ></DetailsCard>
 

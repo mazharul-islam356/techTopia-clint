@@ -1,7 +1,24 @@
+
 /* eslint-disable react/prop-types */
 const DetailsCard = ({productt}) => {
-    console.log(productt);
+    // console.log(productt);
     const {image,name,shortDescription} = productt || {}
+
+
+  // const [cartData,setCartData] = useState()
+
+    const handleCart = () => {
+      fetch('http://localhost:5001/cart',{
+        method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(productt),
+      })
+      .then(res=>res.json())
+      .then(data=>console.log(data))     
+  }
+  
 
 
 
@@ -18,7 +35,7 @@ const DetailsCard = ({productt}) => {
             <p className="py-6">
               {shortDescription}
             </p>
-            <button className="btn btn-info btn-outline">Add product</button>
+            <button onClick={handleCart} className="btn btn-info btn-outline">Add product</button>
           </div>
         </div>
       </div>

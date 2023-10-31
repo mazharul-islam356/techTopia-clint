@@ -1,11 +1,7 @@
 
 
 const AddProduct = () => {
-
-
- 
-
-  
+   
   const handleForm =  (e) => {
     e.preventDefault();
     
@@ -35,7 +31,6 @@ const AddProduct = () => {
       .then((data) => {
         console.log('innside the post response',data);
       });
-
 
   };
 
