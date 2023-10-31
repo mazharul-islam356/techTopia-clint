@@ -44,7 +44,7 @@ console.log(products);
             </Link>
 
 
-            <Link>
+            <Link to='/update'>
             <button className="btn btn-outline btn-wide btn-accent">Update</button>
             </Link>
 

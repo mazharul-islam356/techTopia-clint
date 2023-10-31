@@ -7,6 +7,7 @@ import Login from "../Authintication/Login/Login";
 import Register from "../Authintication/Register/Register";
 import SingleProduct from "../components/Products/SingleProduct";
 import Details from "../components/Details/Details";
+import Update from "../components/Update/Update";
 
 
 
@@ -46,6 +47,10 @@ const routes = createBrowserRouter([
                 path:'/details/:id',
                 element:<Details></Details>,
                 loader: () => fetch('http://localhost:5001/products')
+            },
+            {
+                path:'/update',
+                element:<Update></Update>
             }
            
             

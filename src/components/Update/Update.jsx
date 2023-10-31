@@ -1,50 +1,36 @@
 
 
-const AddProduct = () => {
+const Update = () => {
+    const handleUpdate = (e) => {
 
+        e.preventDefault();
 
- 
-
-  
-  const handleForm =  (e) => {
-    e.preventDefault();
+        const form = e.target;
+        const brandType = form.brandType.value;
+        const name = form.name.value;
+        const image = form.image.value;
+        const price = form.price.value;
+        const type = form.type.value;
+        const shortDescription = form.shortDescription.value;
+        const ratting = form.ratting.value;
     
-    
-    const form = e.target;
-    
-
-    const brandType = form.brandType.value;
-    const name = form.name.value;
-    const image = form.image.value;
-    const price = form.price.value;
-    const type = form.type.value;
-    const shortDescription = form.shortDescription.value;
-    const ratting = form.ratting.value;
-
-    const formData = { brandType,name, image, price, shortDescription, ratting, type };
-    console.log(formData);
-
-    fetch("http://localhost:5001/products", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log('innside the post response',data);
-      });
+        const formData = { brandType,name, image, price, shortDescription, ratting, type };
+        console.log(formData);
 
 
-  };
 
-  return (
-    <div>
-      <div className="flex border justify-center">
-        <form onSubmit={handleForm}>
+    }
 
-          <h1 className="text-3xl font-bold text-center py-4 underline">Add Product</h1>
+
+
+
+
+    return (
+        <div>
+             <div className="flex border justify-center">
+        <form onSubmit={handleUpdate}>
+
+        <h1 className="text-3xl font-bold text-center py-4 underline">Update Product</h1>
 
     
           {/* ****01**** */}
@@ -139,11 +125,11 @@ const AddProduct = () => {
             />
           </div>
 
-          <button className="btn btn-wide my-4">Add</button>
+          <button className="btn btn-wide my-4">Update</button>
         </form>
       </div>
-    </div>
-  );
+        </div>
+    );
 };
 
-export default AddProduct;
+export default Update;
