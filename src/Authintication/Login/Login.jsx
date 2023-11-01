@@ -36,7 +36,7 @@ const Login = () => {
     }
     else if (!/[!@#$%^&*()_+\-=[{};':"|,.<>/?]+/.test(pass)){
 
-      alert('Please include Special Characters in your password')
+      toast.error('Please include Special Characters in your password')
       return
 
     }

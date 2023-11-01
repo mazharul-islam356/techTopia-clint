@@ -1,35 +1,69 @@
+/* eslint-disable react/prop-types */
 
-import { useEffect, useState } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
+const SingleProduct = ({ ad, filteredProducts }) => {
+  console.log(ad);
+  console.log(filteredProducts);
 
-const SingleProduct = () => {
-
-  const data = useParams()
-  console.log(data);
-
-const formData = useLoaderData();
-console.log(formData);
-
-const [products,setProducts] = useState([])
-
-useEffect(()=>{
-  const productsShow = formData.filter(product=>product.type=== data.brand_name)
-  setProducts(productsShow)
-  
-},[formData,data])
-console.log(products);
-
-
+  const { id, brand_name, slider01, slider02, slider03 } = ad;
+  console.log(id, brand_name, slider01, slider02, slider03);
 
   return (
     <div>
 
 
+      <div className="carousel w-full my-10 shadow-xl rounded-xl h-[500px]">
+        <div id="slide1" className="carousel-item relative w-full">
+          <img
+            src={slider01}
+            className="w-full"
+          />
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide4" className="btn btn-circle">
+              ❮
+            </a>
+            <a href="#slide2" className="btn btn-circle">
+              ❯
+            </a>
+          </div>
+        </div>
+        <div id="slide2" className="carousel-item relative w-full">
+          <img
+            src={slider02}
+            className="w-full"
 
-     
+          />
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide1" className="btn btn-circle">
+              ❮
+            </a>
+            <a href="#slide3" className="btn btn-circle">
+              ❯
+            </a>
+          </div>
+        </div>
+        <div id="slide3" className="carousel-item relative w-full">
+          <img
+            src={slider03}
+            className="w-full"
+          />
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" className="btn btn-circle">
+              ❮
+            </a>
+            <a href="#slide1" className="btn btn-circle">
+              ❯
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+
       <div className="grid grid-cols-4 gap-4">
-        {products.map((singleData) => (
+        {filteredProducts.map((singleData) => (
           <div key={singleData._id} className="card mb-8 mt-4 w-[330px] bg-base-100 shadow-xl">
           <figure><img src={singleData.image} alt="Shoes" /></figure>
           <div className="card-body">
@@ -52,10 +86,8 @@ console.log(products);
         </div>
         ))}
       </div>
-      
     </div>
   );
 };
 
 export default SingleProduct;
-

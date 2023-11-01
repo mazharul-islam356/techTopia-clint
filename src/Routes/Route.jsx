@@ -5,9 +5,12 @@ import AddProduct from "../components/Add product/AddProduct";
 import MyCart from "../components/MyCart/MyCart";
 import Login from "../Authintication/Login/Login";
 import Register from "../Authintication/Register/Register";
-import SingleProduct from "../components/Products/SingleProduct";
 import Details from "../components/Details/Details";
 import Update from "../components/Update/Update";
+import PrivetRoute from "../privetRout/PrivetRoute";
+import Error from "../Error";
+import ProductCarddetails from "../components/Products/ProductCarddetails";
+
 
 
 
@@ -27,7 +30,7 @@ const routes = createBrowserRouter([
                 element:<AddProduct></AddProduct>
             },{
                 path:'/myCart',
-                element:<MyCart></MyCart>,
+                element:<PrivetRoute><MyCart></MyCart></PrivetRoute>,
                 loader:()=>fetch('http://localhost:5001/cart')
             },
             {
@@ -38,25 +41,34 @@ const routes = createBrowserRouter([
                 path:'/register',
                 element:<Register></Register>
             },
-            {
-                path:'/products/:brand_name',
-                element:<SingleProduct></SingleProduct>,
-                loader: () => fetch('http://localhost:5001/products')
+            { 
+                path:'/products/:id',
+                element:<ProductCarddetails></ProductCarddetails>,
+                loader: () => fetch('/brandData.json')
                
             },
             {
                 path:'/details/:id',
-                element:<Details></Details>,
+                element:<PrivetRoute><Details></Details></PrivetRoute>,
                 loader: () => fetch('http://localhost:5001/products')
             },
             {
                 path:'/update',
-                element:<Update></Update>
-            }
+                element:<PrivetRoute><Update></Update></PrivetRoute>
+            },
+            // {
+            //     path:'/products/:id',
+            //     element:<AdData></AdData>,
+            //     loader: () => fetch('/brandData.json')
+            // }
            
             
             
         ]
+    },
+    {
+        path:'*',
+        element:<Error></Error>
     }
 ])
 

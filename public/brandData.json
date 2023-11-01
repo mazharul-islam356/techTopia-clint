@@ -2,33 +2,51 @@
     {
         "id": 1,
       "brand_name": "Samsung",
-      "img": "https://i.ibb.co/6tgZpyF/samsung.jpg"
+      "img": "https://i.ibb.co/6tgZpyF/samsung.jpg",
+      "slider01": "https://i.ibb.co/2ZK855Y/gsmarena-001.jpg",
+      "slider02": "https://i.ibb.co/7nhCxXt/maxresdefault.jpg",
+      "slider03": "https://i.ibb.co/Tbc5kwv/samsung-fold-ad.jpg"
       
     },
     {
         "id": 2,
       "brand_name": "Apple",
-      "img": "https://i.ibb.co/vPwQc3m/K7ag-Mkti-CSDSso-LFGAKCt-S.jpg"
+      "img": "https://i.ibb.co/vPwQc3m/K7ag-Mkti-CSDSso-LFGAKCt-S.jpg",
+      "slider01": "https://i.ibb.co/4VMTpdK/i-Phone-14-Features-leaks-2022-64.jpg",
+      "slider02": "https://i.ibb.co/vBVHZdf/Switch-To-i-Phone.jpg",
+      "slider03": "https://i.ibb.co/7YNJZWy/i-Phone-XR-Apple.jpg"
     },
     {
         "id": 3,
       "brand_name": "Xiaomi",
-      "img": "https://i.ibb.co/mG4hTR2/xaomi.jpg"
+      "img": "https://i.ibb.co/mG4hTR2/xaomi.jpg",
+      "slider01": "https://i.ibb.co/wrs4DYs/FXNNWN4-WYAAPtr-J.jpg",
+      "slider02": "https://i.ibb.co/DCjrDyL/22525.jpg",
+      "slider03": "https://i.ibb.co/44nP1B0/FXNNSPBX0-AMf4fh.jpg"
     },
     {
         "id": 4,
       "brand_name": "Google",
-      "img": "https://i.ibb.co/F6JZZcW/google.jpg"
+      "img": "https://i.ibb.co/F6JZZcW/google.jpg",
+      "slider01": "https://i.ibb.co/gMJYRK5/Pixel-6-UK-ad-cover.jpg",
+      "slider02": "https://i.ibb.co/9yR0npz/gw2htoo9eeb61.jpg",
+      "slider03": "https://i.ibb.co/0KR5KGc/Pixel-6-Pro.jpg"
     },
     {
         "id": 5,
       "brand_name": "OnePlus",
-      "img": "https://i.ibb.co/LJQYYGv/oneplus.jpg"
+      "img": "https://i.ibb.co/LJQYYGv/oneplus.jpg",
+      "slider01": "https://i.ibb.co/QJTDX2g/maxresdefault.jpg",
+      "slider02": "https://i.ibb.co/gM5JchY/1089260009537667072.jpg",
+      "slider03": "https://i.ibb.co/nPK62HQ/capture-decran-2018-10-29-a-20-2.jpg"
     },
     {
         "id": 6,
       "brand_name": "Nokia",
-      "img": "https://i.ibb.co/JsPKVW9/nokia.jpg"
+      "img": "https://i.ibb.co/JsPKVW9/nokia.jpg",
+      "slider01": "https://i.ibb.co/VBf3TGB/nokia-ad-2-by-dalash-d1mg3m0-ful.jpg",
+      "slider02": "https://i.ibb.co/51Qkmw4/200319-nokia-phones-2020-1.jpg",
+      "slider03": "https://i.ibb.co/mc0dGhF/2706f3644293d01632adf15c710fb6ab.jpg"
     }
   ]
   

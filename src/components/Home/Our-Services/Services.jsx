@@ -9,7 +9,7 @@ import { SiOneplus } from 'react-icons/si';
 const Services = () => {
   return (
     <div className='my-10 p-10 rounded-xl pb-20 mb-24 bg-slate-200'>
-        <h1 className=' text-4xl font-semibold text-center underline text-blue-500'>Our Services</h1>
+        <h1 className=' text-4xl font-semibold text-center  text-black'>Our Services</h1>
       <div className="text-center lg:gap-4 lg:mr-10 lg:ml-14 lg:mt-12 mt-8 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
 
         <div className="card card-compact mr-2 mb-2 py-4 bg-base-100 shadow-xl">
