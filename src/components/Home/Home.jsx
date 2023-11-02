@@ -13,7 +13,7 @@ const Home = () => {
    
     
   return (
-    <div>
+    <div className="mt-2">
       <div
         className="hero min-h-screen"
         style={{

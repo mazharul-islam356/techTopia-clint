@@ -1,3 +1,5 @@
+import swal from "sweetalert";
+import Swal from "sweetalert2";
 
 /* eslint-disable react/prop-types */
 const DetailsCard = ({productt}) => {
@@ -8,7 +10,7 @@ const DetailsCard = ({productt}) => {
   // const [cartData,setCartData] = useState()
 
     const handleCart = () => {
-      fetch('http://localhost:5001/cart',{
+      fetch('https://assingment-10-server-one.vercel.app/cart',{
         method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -16,7 +18,13 @@ const DetailsCard = ({productt}) => {
       body: JSON.stringify(productt),
       })
       .then(res=>res.json())
-      .then(data=>console.log(data))     
+      .then(data=>console.log(data))
+ 
+      Swal.fire(
+        'Your product added succecfully to My Cart!',
+        'Go to your cart',
+        'success'
+      )   
   }
   
 
@@ -28,7 +36,7 @@ const DetailsCard = ({productt}) => {
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src={image}
-            className="max-w-sm rounded-lg shadow-2xl"
+            className="max-w-sm lg:-ml-0 -ml-4 p-4 lg:p-0 rounded-lg shadow-2xl"
           />
           <div>
             <h1 className="text-5xl font-bold">{name}</h1>

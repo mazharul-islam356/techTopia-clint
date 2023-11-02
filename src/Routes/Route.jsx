@@ -31,7 +31,7 @@ const routes = createBrowserRouter([
             },{
                 path:'/myCart',
                 element:<PrivetRoute><MyCart></MyCart></PrivetRoute>,
-                loader:()=>fetch('http://localhost:5001/cart')
+                loader:()=>fetch('https://assingment-10-server-one.vercel.app/cart')
             },
             {
                 path:'/login',
@@ -50,7 +50,7 @@ const routes = createBrowserRouter([
             {
                 path:'/details/:id',
                 element:<PrivetRoute><Details></Details></PrivetRoute>,
-                loader: () => fetch('http://localhost:5001/products')
+                loader: () => fetch('https://assingment-10-server-one.vercel.app/products')
             },
             {
                 path:'/update',

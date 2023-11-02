@@ -10,11 +10,11 @@ const Services = () => {
   return (
     <div className='my-10 p-10 rounded-xl pb-20 mb-24 bg-slate-200'>
         <h1 className=' text-4xl font-semibold text-center  text-black'>Our Services</h1>
-      <div className="text-center lg:gap-4 lg:mr-10 lg:ml-14 lg:mt-12 mt-8 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+      <div className="text-center lg:gap-4 lg:mr-10 lg:ml-14 lg:mt-12 mt-8 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
 
         <div className="card card-compact mr-2 mb-2 py-4 bg-base-100 shadow-xl">
 
-          <AiOutlineGoogle className="text-5xl  text-black ml-44 mt-4"></AiOutlineGoogle>
+          <AiOutlineGoogle className="text-5xl  text-black lg:ml-44 ml-32 lg:mt-4"></AiOutlineGoogle>
 
           <div className="p-4">
             <h2 className="text-3xl">Google</h2>
@@ -25,7 +25,7 @@ const Services = () => {
         </div>
 
         <div className="card card-compact py-4 bg-base-100 shadow-xl">
-          <SiSamsung className="text-7xl text-black ml-44 mt-4"></SiSamsung>
+          <SiSamsung className="text-7xl text-black lg:ml-44 ml-32 lg:mt-4"></SiSamsung>
 
           <div className="p-4">
             <h2 className="text-3xl">Samsung</h2>
@@ -36,7 +36,7 @@ const Services = () => {
         </div>
 
         <div className="card card-compact py-4 bg-base-100 shadow-xl">
-          <AiOutlineApple className="text-6xl text-black ml-44 mt-4"></AiOutlineApple>
+          <AiOutlineApple className="text-6xl text-black lg:ml-44 ml-32 lg:mt-4"></AiOutlineApple>
 
           <div className="p-4">
             <h2 className="text-3xl">Apple</h2>
@@ -46,7 +46,7 @@ const Services = () => {
           </div>
         </div>
         <div className="card card-compact py-4 bg-base-100 shadow-xl">
-          <SiOneplus className="text-6xl text-black ml-44 mt-4"></SiOneplus>
+          <SiOneplus className="text-6xl text-black lg:ml-44 ml-32 lg:mt-4"></SiOneplus>
 
           <div className="p-4">
             <h2 className="text-3xl">OnePlus</h2>
@@ -56,7 +56,7 @@ const Services = () => {
           </div>
         </div>
         <div className="card card-compact py-4 bg-base-100 shadow-xl">
-          <SiXiaomi className="text-6xl text-black ml-44 mt-4"></SiXiaomi>
+          <SiXiaomi className="text-6xl text-black lg:ml-44 ml-32 lg:mt-4"></SiXiaomi>
 
           <div className="p-4">
             <h2 className="text-3xl">Xiaomi</h2>
@@ -66,7 +66,7 @@ const Services = () => {
           </div>
         </div>
         <div className="card card-compact py-4 bg-base-100 shadow-xl">
-          <SiNokia className="text-6xl text-black ml-44 mt-4"></SiNokia>
+          <SiNokia className="text-6xl text-black lg:ml-44 ml-32 lg:mt-4"></SiNokia>
 
           <div className="p-4">
             <h2 className="text-3xl">Nokia</h2>

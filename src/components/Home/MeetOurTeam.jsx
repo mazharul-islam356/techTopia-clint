@@ -9,11 +9,11 @@ const MeetOurTeam = () => {
   return (
     <div>
 
-        <h1 className="text-3xl font-semibold text-center my-10">Meet Our Team</h1>
+        <h1 className="text-3xl  font-semibold text-center my-12">Meet Our Team</h1>
         
 
 
-      <div className="grid grid-cols-3 mb-32">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-0 mb-32">
       <div className="card w-[400px] h-[400px] bg-base-100 shadow-xl">
         <figure>
           <img

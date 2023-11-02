@@ -13,7 +13,7 @@ const ProductsCard = ({product}) => {
     return (
         <div>
             <Link to={`/products/${id}`} >
-                <div  className="card h-72 justify-center items-center mt-4 w-96 bg-base-100 shadow-xl">
+                <div  className="card h-72 justify-center items-center mt-10 w-96 bg-base-100 shadow-xl">
                 <figure>
                   <img
                     src={img}

@@ -27,7 +27,7 @@ const Update = () => {
 
     return (
         <div>
-             <div className="flex border justify-center">
+             <div className="flex border justify-center mt-4">
         <form onSubmit={handleUpdate}>
 
         <h1 className="text-3xl font-bold text-center py-4 underline">Update Product</h1>

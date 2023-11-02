@@ -4,7 +4,7 @@ export default function useFetchProducts() {
   const [productss , setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5001/products")
+    fetch("https://assingment-10-server-one.vercel.app/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

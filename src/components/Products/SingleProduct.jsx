@@ -62,7 +62,7 @@ const SingleProduct = ({ ad, filteredProducts }) => {
 
 
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid md:grid-cols-2 justify-center lg:grid-cols-4 lg:gap-4">
         {filteredProducts.map((singleData) => (
           <div key={singleData._id} className="card mb-8 mt-4 w-[330px] bg-base-100 shadow-xl">
           <figure><img src={singleData.image} alt="Shoes" /></figure>

@@ -6,12 +6,12 @@ import { AuthContext } from "../Authintication/AuthProvider";
 
 const PrivetRoute = ({children}) => {
 
-    const {userr,loading} = useContext(AuthContext)
+    const {user,loading} = useContext(AuthContext)
     if(loading){
       return <span className="loading loading-infinity loading-lg"></span>
     }
 
-    if(userr){
+    if(user){
        return children
     }
 
