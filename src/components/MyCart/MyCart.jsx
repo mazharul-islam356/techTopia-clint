@@ -11,7 +11,7 @@ const MyCart = () => {
         <figure>
           <img className="lg:w-[300px] w-64"
             src={cart.image}
-            alt="Movie"
+            alt=""
           />
         </figure>
         <div className="mt-24 lg:w-[300px] space-y-1">

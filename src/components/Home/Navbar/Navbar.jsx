@@ -59,7 +59,7 @@ const Navbar = () => {
         className={({ isActive, isPending }) =>
           isPending ? "pending" : isActive ? "text-blue-400 underline p-4" : ""
         }
-        to="/myCart"
+        to="/cart"
       >
         <button className="btn btn-ghost">My Cart</button>
       </NavLink>

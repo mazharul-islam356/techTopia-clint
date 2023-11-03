@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import DetailsCard from "./DetailsCard";
-import MyCart from "../MyCart/MyCart";
 
 const Details = () => {
 
@@ -18,6 +17,7 @@ useEffect(()=>{
     const findProducts = detailsData.find((product)=>product._id === id)
     setProductt(findProducts)
 },[id,detailsData])
+console.log(productt);
 
 
 

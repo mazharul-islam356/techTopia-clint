@@ -20,7 +20,7 @@ const AddProduct = () => {
     const formData = { brandType,name, image, price, shortDescription, ratting, type };
     console.log(formData);
 
-    fetch("https://assingment-10-server-one.vercel.app/products", {
+    fetch("https://assingment-10.vercel.app/products", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

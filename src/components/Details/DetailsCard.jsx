@@ -1,30 +1,36 @@
-import swal from "sweetalert";
-import Swal from "sweetalert2";
+
 
 /* eslint-disable react/prop-types */
 const DetailsCard = ({productt}) => {
-    // console.log(productt);
+    console.log(productt);
     const {image,name,shortDescription} = productt || {}
-
+    
 
   // const [cartData,setCartData] = useState()
 
     const handleCart = () => {
-      fetch('https://assingment-10-server-one.vercel.app/cart',{
+
+
+      fetch("https://assingment-10.vercel.app/cart", {
+        // mode:"no-cors",
         method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(productt),
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(productt),
       })
-      .then(res=>res.json())
-      .then(data=>console.log(data))
+        .then((res) => res.json())
+        .then((data) => {
+          console.log('innside the post response',data);
+        });
  
-      Swal.fire(
-        'Your product added succecfully to My Cart!',
-        'Go to your cart',
-        'success'
-      )   
+      // Swal.fire(
+      //   'Your product added succecfully to My Cart!',
+      //   'Go to your cart',
+      //   'success'     
+      //   )  
+
+      // console.log(productt); 
   }
   
 
@@ -43,7 +49,7 @@ const DetailsCard = ({productt}) => {
             <p className="py-6">
               {shortDescription}
             </p>
-            <button onClick={handleCart} className="btn btn-info btn-outline">Add product</button>
+            <button onClick={handleCart} className="btn btn-info btn-outline">Add to Cart</button>
           </div>
         </div>
       </div>

@@ -35,7 +35,7 @@ const [filteredProducts,setfilteredProducts] = useState([])
 
 useEffect(()=>{
 
-    fetch('https://assingment-10-server-one.vercel.app/products')
+    fetch('https://assingment-10.vercel.app/products')
     .then(res=>res.json())
     .then(data=>{
         setProducts(data)

@@ -29,9 +29,9 @@ const routes = createBrowserRouter([
                 path:'/addProduct',
                 element:<AddProduct></AddProduct>
             },{
-                path:'/myCart',
+                path:'/cart',
                 element:<PrivetRoute><MyCart></MyCart></PrivetRoute>,
-                loader:()=>fetch('https://assingment-10-server-one.vercel.app/cart')
+                loader:()=>fetch('https://assingment-10.vercel.app/cart')
             },
             {
                 path:'/login',
@@ -50,7 +50,7 @@ const routes = createBrowserRouter([
             {
                 path:'/details/:id',
                 element:<PrivetRoute><Details></Details></PrivetRoute>,
-                loader: () => fetch('https://assingment-10-server-one.vercel.app/products')
+                loader: () => fetch('https://assingment-10.vercel.app/products')
             },
             {
                 path:'/update',
