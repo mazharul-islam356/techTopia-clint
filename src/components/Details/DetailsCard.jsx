@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 
 
 /* eslint-disable react/prop-types */
@@ -24,11 +25,11 @@ const DetailsCard = ({productt}) => {
           console.log('innside the post response',data);
         });
  
-      // Swal.fire(
-      //   'Your product added succecfully to My Cart!',
-      //   'Go to your cart',
-      //   'success'     
-      //   )  
+      Swal.fire(
+        'Your product added succecfully to My Cart!',
+        'Go to your cart',
+        'success'     
+        )  
 
       // console.log(productt); 
   }
