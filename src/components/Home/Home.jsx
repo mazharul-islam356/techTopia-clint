@@ -10,10 +10,11 @@ const Home = () => {
   return (
     <div className="mt-2">
       <div
-        className="hero min-h-screen"
+        className="hero bg-cover bg-center bg-no-repeat  min-h-[30rem]"
         style={{
           backgroundImage:
-            "url(https://i.ibb.co/7bmJpK1/modern-stationary-collection-arrangement.jpg)",
+            "url(https://i.ibb.co/bXvmQBr/techtoopia.jpg)",
+            
         }}
       >
         <div className="hero-overlay bg-opacity-60"></div>

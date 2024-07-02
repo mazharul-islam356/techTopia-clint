@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 
 const MeetOurTeam = () => {
   return (
-    <div>
+    <div className='w-11/12 mx-auto'>
 
-        <h1 className="text-3xl  font-semibold text-center my-12">Meet Our Team</h1>
+        <h1 className="text-3xl uppercase font-semibold text-center my-12 font-sans">-:Meet Our Team:-</h1>
         
 
 
