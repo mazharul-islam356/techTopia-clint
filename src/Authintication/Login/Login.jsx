@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from 'react-icons/fc';
 import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider";
@@ -9,15 +9,27 @@ import toast from "react-hot-toast";
 
 const Login = () => {
 
-
   const {googleLogin} = useContext(AuthContext)
   const [error,setError] = useState('')
+  const navigate = useNavigate()
+
+
+
 
   error && toast.error('Email/Password do not match') 
   const handleLogin = (media) => {
     media()
-    .then(res=>console.log(res.user))
+    .then(res=>
+      {
+      console.log(res.user)
+      if(res.user){
+        toast.success('Login successfully!')
+      navigate('/')
+    }
+      }
+    )
     .catch(err=>console.log(err))
+    
   }
 
   const handleLoginSubmit = (e) =>{
@@ -49,8 +61,8 @@ const Login = () => {
     signInWithEmailAndPassword(auth,email,pass)
     .then(res=>console.log(res.user))
     .catch(err=>setError(err.message))
-    
-    // setError('')
+    toast.success('Login successfully!')
+    navigate('/')
     return
   } 
       
@@ -61,7 +73,7 @@ const Login = () => {
     <div className="hero  min-h-screen bg-base-200">
       <div className="hero-content flex-col">
         <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Login now!</h1>
+          <h1 className="text-4xl text-[#36d399] font-semibold font-sans mb-5 uppercase">Login now!</h1>
         </div>
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={handleLoginSubmit} className="card-body w-96 mr-10  p-10">
@@ -73,7 +85,7 @@ const Login = () => {
               
                 type="email"
                 name="email"
-                placeholder="email"
+                placeholder="Email"
                 className="input input-bordered"
                 required
               />
@@ -92,15 +104,15 @@ const Login = () => {
               
             </div>
 
-            <button onClick={()=> handleLogin(googleLogin)} className="btn mt-3">
+            <button onClick={()=> handleLogin(googleLogin)} className="btn mt-3 btn-sm btn-accent btn-outline">
                   Continue With
                   <FcGoogle className="text-xl"></FcGoogle>
                 </button>
               
-            <div className="form-control mt-6">
-              <button  className="btn btn-primary">Login</button>
+            <div className="form-control mt-2">
+              <button  className="btn btn-success btn-sm">Login</button>
             </div>
-            <p>New to here? Please <Link className="btn-link font-bold" to='/register'>Register</Link> </p>
+            <p>New to here? Please <Link className="btn-link text-[#36d399] font-bold" to='/register'>Register</Link> </p>
           </form>
         </div>
       </div>

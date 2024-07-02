@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../Authintication/AuthProvider";
 import { BiLogOut } from "react-icons/bi";
 import { MdLogin } from "react-icons/md";
@@ -168,7 +168,10 @@ const Navbar = () => {
         {navLink}
       </ul>
     </div>
-    <a className="text-xl font-sans font-semibold">TechTopia</a>
+    <Link to='/' className="flex items-center">
+    <img className="w-8" src="https://i.ibb.co/7nzVmh1/pngwing-com-21.png" alt="" />
+    <a className="text-xl relative right-1 top-0.5 font-sans font-semibold">echTopia</a>
+    </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

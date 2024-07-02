@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider";
+import { FcGoogle } from 'react-icons/fc';
 
 
 const Register = () => {
 
   const {REuser} = useContext(AuthContext)
- 
+  const {googleLogin} = useContext(AuthContext)
 
   const handleSubmit = (e) =>{
     e.preventDefault()
@@ -37,6 +38,12 @@ const Register = () => {
       
   }
 
+  // google login
+  const handleLogin = (media) => {
+    media()
+    .then(res=>console.log(res.user))
+    .catch(err=>console.log(err))
+  }
 
 
 
@@ -44,7 +51,7 @@ const Register = () => {
         <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col">
         <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Register now!</h1>
+          <h1 className="text-4xl font-semibold font-sans text-[#3abff8]">Register now!</h1>
         </div>
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={handleSubmit} className="card-body w-96 p-10">
@@ -67,7 +74,7 @@ const Register = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="email"
+                placeholder="Email"
                 className="input input-bordered"
                 required
               />
@@ -79,20 +86,20 @@ const Register = () => {
               <input
                 type="password"
                 name="pass"
-                placeholder="password"
+                placeholder="Password"
                 className="input input-bordered"
                 required
               />
-              <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
-                  Forgot password?
-                </a>
-              </label>
+             
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Register</button>
+            <button onClick={()=> handleLogin(googleLogin)} className="btn mt-3 btn-sm mb-2 btn-accent btn-outline">
+                  Continue With
+                  <FcGoogle className="text-xl"></FcGoogle>
+                </button>
+              <button className="btn btn-info text-white btn-sm">Register</button>
             </div>
-            <p>Allready have an account? Please <Link className="btn-link font-bold" to='/login'>Login</Link> </p>
+            <p>Allready have an account? Please <Link className="btn-link text-[#3abff8] font-bold" to='/login'>Login!</Link> </p>
           </form>
         </div>
       </div>
