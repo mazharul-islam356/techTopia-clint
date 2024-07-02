@@ -23,10 +23,7 @@ useEffect(()=>{
 console.log(ad);
 
 
-
 //-------------------- 4 card filte part-----------------
-
-
 
 
 const [products,setProducts] = useState([])

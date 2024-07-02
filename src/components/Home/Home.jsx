@@ -3,15 +3,10 @@ import Services from "./Our-Services/Services";
 import Products from "../Products/Products";
 import MeetOurTeam from "./MeetOurTeam";
 
-
-
 const Home = () => {
- 
-  
-    const data = useLoaderData()
-     console.log(data);
-   
-    
+  const data = useLoaderData();
+  console.log(data);
+
   return (
     <div className="mt-2">
       <div
@@ -26,20 +21,18 @@ const Home = () => {
           <div className="max-w-md">
             <h1 className="mb-5 text-5xl font-bold">Tech for the Future</h1>
             <p className="mb-5">
-            Using technology to make the world a better place, from education and healthcare to sustainability and environmental protection.
+              Using technology to make the world a better place, from education
+              and healthcare to sustainability and environmental protection.
             </p>
           </div>
         </div>
       </div>
 
-   
+      <Products data={data}></Products>
 
-    <Products data={data}></Products>
+      <Services></Services>
 
-    <Services></Services>
-
-    <MeetOurTeam></MeetOurTeam>
-
+      <MeetOurTeam></MeetOurTeam>
     </div>
   );
 };

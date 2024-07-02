@@ -1,49 +1,45 @@
-
-
 const Update = () => {
-    const handleUpdate = (e) => {
+  const handleUpdate = (e) => {
+    e.preventDefault();
 
-        e.preventDefault();
+    const form = e.target;
+    const brandType = form.brandType.value;
+    const name = form.name.value;
+    const image = form.image.value;
+    const price = form.price.value;
+    const type = form.type.value;
+    const shortDescription = form.shortDescription.value;
+    const ratting = form.ratting.value;
 
-        const form = e.target;
-        const brandType = form.brandType.value;
-        const name = form.name.value;
-        const image = form.image.value;
-        const price = form.price.value;
-        const type = form.type.value;
-        const shortDescription = form.shortDescription.value;
-        const ratting = form.ratting.value;
-    
-        const formData = { brandType,name, image, price, shortDescription, ratting, type };
-        console.log(formData);
+    const formData = {
+      brandType,
+      name,
+      image,
+      price,
+      shortDescription,
+      ratting,
+      type,
+    };
+    console.log(formData);
+  };
 
-
-
-    }
-
-
-
-
-
-    return (
-        <div>
-             <div className="flex border justify-center mt-4">
+  return (
+    <div>
+      <div className="flex border justify-center mt-4">
         <form onSubmit={handleUpdate}>
+          <h1 className="text-3xl font-bold text-center py-4 underline">
+            Update Product
+          </h1>
 
-        <h1 className="text-3xl font-bold text-center py-4 underline">Update Product</h1>
-
-    
           {/* ****01**** */}
           <div className="form-control w-full max-w-xs">
             <label className="label">
               <span className="label-text">Brand/Catagory</span>
             </label>
-            <select
-              
-              name="type"
-              className="select select-bordered"
-            >
-              <option disabled selected>Pick a catagory</option>
+            <select name="type" className="select select-bordered">
+              <option disabled selected>
+                Pick a catagory
+              </option>
               <option>Samsung</option>
               <option>Apple</option>
               <option>Google</option>
@@ -54,7 +50,7 @@ const Update = () => {
           </div>
 
           {/* type */}
-        <div className="form-control w-full max-w-xs">
+          <div className="form-control w-full max-w-xs">
             <label className="label">
               <span className="label-text">Brand type</span>
             </label>
@@ -128,8 +124,8 @@ const Update = () => {
           <button className="btn btn-wide my-4">Update</button>
         </form>
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Update;

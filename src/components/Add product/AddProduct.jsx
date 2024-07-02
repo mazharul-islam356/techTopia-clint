@@ -1,13 +1,8 @@
-
-
 const AddProduct = () => {
-   
-  const handleForm =  (e) => {
+  const handleForm = (e) => {
     e.preventDefault();
-    
-    
+
     const form = e.target;
-    
 
     const brandType = form.brandType.value;
     const name = form.name.value;
@@ -17,7 +12,15 @@ const AddProduct = () => {
     const shortDescription = form.shortDescription.value;
     const ratting = form.ratting.value;
 
-    const formData = { brandType,name, image, price, shortDescription, ratting, type };
+    const formData = {
+      brandType,
+      name,
+      image,
+      price,
+      shortDescription,
+      ratting,
+      type,
+    };
     console.log(formData);
 
     fetch("https://assingment-10.vercel.app/products", {
@@ -29,30 +32,27 @@ const AddProduct = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log('innside the post response',data);
+        console.log("innside the post response", data);
       });
-
   };
 
   return (
     <div>
       <div className="flex border justify-center">
         <form onSubmit={handleForm}>
+          <h1 className="text-3xl font-bold text-center py-4 underline">
+            Add Product
+          </h1>
 
-          <h1 className="text-3xl font-bold text-center py-4 underline">Add Product</h1>
-
-    
           {/* ****01**** */}
           <div className="form-control w-full max-w-xs">
             <label className="label">
               <span className="label-text">Brand/Catagory</span>
             </label>
-            <select
-              
-              name="type"
-              className="select select-bordered"
-            >
-              <option disabled selected>Pick a catagory</option>
+            <select name="type" className="select select-bordered">
+              <option disabled selected>
+                Pick a catagory
+              </option>
               <option>Samsung</option>
               <option>Apple</option>
               <option>Google</option>
@@ -63,7 +63,7 @@ const AddProduct = () => {
           </div>
 
           {/* type */}
-        <div className="form-control w-full max-w-xs">
+          <div className="form-control w-full max-w-xs">
             <label className="label">
               <span className="label-text">Brand type</span>
             </label>

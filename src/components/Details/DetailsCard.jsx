@@ -1,41 +1,34 @@
 import Swal from "sweetalert2";
 
-
 /* eslint-disable react/prop-types */
-const DetailsCard = ({productt}) => {
-    console.log(productt);
-    const {image,name,shortDescription} = productt || {}
-    
+const DetailsCard = ({ productt }) => {
+  console.log(productt);
+  const { image, name, shortDescription } = productt || {};
 
   // const [cartData,setCartData] = useState()
 
-    const handleCart = () => {
+  const handleCart = () => {
+    fetch("https://assingment-10.vercel.app/cart", {
+      // mode:"no-cors",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(productt),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("innside the post response", data);
+      });
 
+    Swal.fire(
+      "Your product added succecfully to My Cart!",
+      "Go to your cart",
+      "success"
+    );
 
-      fetch("https://assingment-10.vercel.app/cart", {
-        // mode:"no-cors",
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(productt),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          console.log('innside the post response',data);
-        });
- 
-      Swal.fire(
-        'Your product added succecfully to My Cart!',
-        'Go to your cart',
-        'success'     
-        )  
-
-      // console.log(productt); 
-  }
-  
-
-
+    // console.log(productt);
+  };
 
   return (
     <div>
@@ -47,10 +40,10 @@ const DetailsCard = ({productt}) => {
           />
           <div>
             <h1 className="text-5xl font-bold">{name}</h1>
-            <p className="py-6">
-              {shortDescription}
-            </p>
-            <button onClick={handleCart} className="btn btn-info btn-outline">Add to Cart</button>
+            <p className="py-6">{shortDescription}</p>
+            <button onClick={handleCart} className="btn btn-info btn-outline">
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>

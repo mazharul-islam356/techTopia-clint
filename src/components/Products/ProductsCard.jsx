@@ -8,8 +8,6 @@ const ProductsCard = ({product}) => {
   const {id,brand_name,img} = product || {}
   
 
-   
-   
     return (
         <div>
             <Link to={`/products/${id}`} >

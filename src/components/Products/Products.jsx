@@ -13,7 +13,6 @@ const Products = ({data}) => {
             data.map(product=><ProductsCard key={product.id} product={product}></ProductsCard>)
         }
             
-            
         </div>
     );
 };

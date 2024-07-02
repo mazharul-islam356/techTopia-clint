@@ -4,26 +4,17 @@ import { useContext } from "react";
 import { Navigate } from "react-router-dom";
 import { AuthContext } from "../Authintication/AuthProvider";
 
-const PrivetRoute = ({children}) => {
+const PrivetRoute = ({ children }) => {
+  const { user, loading } = useContext(AuthContext);
+  if (loading) {
+    return <span className="loading loading-infinity loading-lg"></span>;
+  }
 
-    const {user,loading} = useContext(AuthContext)
-    if(loading){
-      return <span className="loading loading-infinity loading-lg"></span>
-    }
+  if (user) {
+    return children;
+  }
 
-    if(user){
-       return children
-    }
-
-
-
-    return (
-        <Navigate to='/login'>
-            
-        </Navigate>
-    );
+  return <Navigate to="/login"></Navigate>;
 };
-
-
 
 export default PrivetRoute;
