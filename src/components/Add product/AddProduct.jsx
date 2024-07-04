@@ -40,12 +40,13 @@ const AddProduct = () => {
     <div>
       <div className="flex border justify-center">
         <form onSubmit={handleForm}>
-          <h1 className="text-3xl font-bold text-center py-4 underline">
+          <h1 className="text-3xl font-sans font-bold text-center py-4 underline">
             Add Product
           </h1>
 
           {/* ****01**** */}
-          <div className="form-control w-full max-w-xs">
+         <div className="flex justify-between gap-6">
+         <div className="form-control w-full max-w-xs">
             <label className="label">
               <span className="label-text">Brand/Catagory</span>
             </label>
@@ -74,8 +75,10 @@ const AddProduct = () => {
               className="input input-bordered w-full max-w-xs"
             />
           </div>
+         </div>
           {/* ****02**** */}
-          <div className="form-control w-full max-w-xs">
+         <div className="flex gap-6">
+         <div className="form-control w-full max-w-xs">
             <label className="label">
               <span className="label-text">Image URL:</span>
             </label>
@@ -98,7 +101,10 @@ const AddProduct = () => {
               className="input input-bordered w-full max-w-xs"
             />
           </div>
+         </div>
+
           {/* ****04**** */}
+          <div className="flex gap-6">
           <div className="form-control w-full max-w-xs">
             <label className="label">
               <span className="label-text">Price:</span>
@@ -111,17 +117,7 @@ const AddProduct = () => {
             />
           </div>
           {/* ****05**** */}
-          <div className="form-control w-full max-w-xs">
-            <label className="label">
-              <span className="label-text">Short Description</span>
-            </label>
-            <textarea
-              name="shortDescription"
-              placeholder=""
-              className="textarea textarea-bordered textarea-lg w-full max-w-xs"
-            ></textarea>
-          </div>
-          {/* ****06**** */}
+
           <div className="form-control w-full max-w-xs">
             <label className="label">
               <span className="label-text">Ratting</span>
@@ -132,6 +128,19 @@ const AddProduct = () => {
               placeholder=""
               className="input input-bordered w-full max-w-xs"
             />
+          </div>
+          </div>
+          
+          {/* ****06**** */}
+          <div className="form-control w-full max-w-full">
+            <label className="label">
+              <span className="label-text">Short Description</span>
+            </label>
+            <textarea
+              name="shortDescription"
+              placeholder=""
+              className="textarea textarea-bordered textarea-lg w-full max-w-xs"
+            ></textarea>
           </div>
 
           <button className="btn btn-wide my-4">Add</button>
